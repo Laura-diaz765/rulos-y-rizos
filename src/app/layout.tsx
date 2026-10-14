@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Merriweather, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/app/components/theme-provider';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const fontSans = Inter({
   subsets: ['latin'],
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es" suppressHydrationWarning>
       <body
         className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}
       >
