@@ -50,7 +50,7 @@ export const CANCELLATION_HOURS = '[X]';
 
 // Placeholders until those pages exist.
 export const PRIVACY_HREF = '/politica-de-privacidad';
-export const PROVIDER_LOGIN_HREF = '/login';
+export const PROVIDER_LOGIN_HREF = '/auth/login';
 
 // The booking flow doesn't exist yet, so booking links point to the services.
 export const BOOKING_HREF = '#servicios';
