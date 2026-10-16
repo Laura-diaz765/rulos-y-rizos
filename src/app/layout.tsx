@@ -20,6 +20,7 @@ const fontMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Rulos Y Rizos Pa'ti",
+  icons: { icon: '/favicon.png', apple: '/favicon.png' },
   description:
     "Rulos Y Rizos Pa'ti: peluquería especializada en el cuidado del cabello, rizos definidos y belleza natural. ¡Resalta tu estilo con nosotros!",
 };
