@@ -13,7 +13,7 @@ export function BrandLogo({
 }) {
   return (
     <Image
-      src="/logo.png"
+      src="/logo.webp"
       alt="Rulos y Rizos Hair Salon"
       width={1358}
       height={1158}

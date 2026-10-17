@@ -18,6 +18,9 @@ import {
 } from '@/components/ui/card';
 import { formatPrice, type ResumenCita } from '@/lib/landing-data';
 
+import Image from 'next/image';
+import heroImage from '@/assets/hero-rulos-y-rizos.webp';
+
 type HeroSectionProps = {
   benefits: string[];
   resumen: ResumenCita;
@@ -86,18 +89,16 @@ export function HeroSection({
       </div>
 
       <div className="relative mx-auto w-full max-w-md pb-28 sm:pb-20 lg:mr-8">
-        <div className="flex aspect-4/5 flex-col items-center justify-center gap-3 rounded-2xl border bg-card p-8 pb-32 text-center">
-          <span className="flex size-20 items-center justify-center rounded-full bg-secondary text-primary">
-            <Sparkles className="size-10" aria-hidden="true" />
-          </span>
-          <span className="mt-2 rounded-md bg-muted px-3 py-1 text-xs font-semibold tracking-wider text-muted-foreground uppercase">
-            Espacio para foto
-          </span>
-          <p className="text-sm font-medium">[Foto de Rulos y Rizos]</p>
-          <p className="max-w-xs text-xs text-muted-foreground">
-            Fotografía real de trabajos y resultados en definición y peinado de
-            cabello rizado
-          </p>
+        <div className="relative aspect-4/5 overflow-hidden rounded-2xl border bg-card">
+          <Image
+            src={heroImage}
+            alt="Cabello rizado definido después de un servicio de Rulos y Rizos Pa'ti"
+            fill
+            placeholder="blur"
+            sizes="(max-width: 480px) 100vw, 448px"
+            fetchPriority="high"
+            className="object-cover"
+          />
         </div>
 
         <Card
