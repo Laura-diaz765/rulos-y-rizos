@@ -45,15 +45,14 @@ export type Tip = {
 // Placeholder until the stylist's real WhatsApp number is defined.
 export const WHATSAPP_URL = 'https://wa.me/570000000000';
 
-// Placeholder until the minimum cancellation notice is defined.
-export const CANCELLATION_HOURS = '[X]';
+// Must match the 24-hour window enforced by the cancellation function in Supabase.
+export const CANCELLATION_HOURS = 24;
 
 // Placeholders until those pages exist.
 export const PRIVACY_HREF = '/politica-de-privacidad';
 export const PROVIDER_LOGIN_HREF = '/auth/login';
 
-// The booking flow doesn't exist yet, so booking links point to the services.
-export const BOOKING_HREF = '#servicios';
+export const BOOKING_HREF = '/reservar';
 
 export const brand: Brand = {
   nombre: "Rulos y Rizos Pa'ti",

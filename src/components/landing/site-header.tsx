@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 
+import { BrandLogo } from '@/components/brand-logo';
 import { ModeToggle } from '@/components/toggle-mode';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import type { Brand, NavLink } from '@/lib/landing-data';
 
@@ -25,11 +25,7 @@ export function SiteHeader({
           href="#inicio"
           className="flex min-h-11 items-center gap-3 rounded-lg outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
         >
-          <Avatar className="size-10 rounded-lg after:rounded-lg">
-            <AvatarFallback className="rounded-lg bg-primary text-sm font-semibold text-primary-foreground">
-              {brand.iniciales}
-            </AvatarFallback>
-          </Avatar>
+          <BrandLogo priority />
           <span className="flex flex-col">
             <span className="text-sm leading-5 font-semibold">
               {brand.nombre}
