@@ -15,18 +15,18 @@ import { formatPrice, type Service } from '@/lib/landing-data';
 
 // Images live in /public. Services without an entry fall back to a placeholder.
 const serviceImages: Record<string, string> = {
-  'corte-dama': '/corte-dama.webp',
-  'corte-caballero': '/corte-hombre.webp',
-  tinte: '/tinte-color.webp',
-  'mechas-balayage': '/mechas.webp',
-  'alisado-keratina': '/keratina.webp',
-  'tratamiento-capilar': '/tratamiento-capilar.webp',
-  'maquillaje-social': '/maquillaje.webp',
-  peinado: '/peinado.webp',
-  'definicion-de-rizos': '/rizos.webp',
-  manicure: '/manicure.webp',
-  pedicure: '/pedicure.webp',
-  cejas: '/cejas.webp',
+  'corte-dama': '/src/assets/corte-dama.webp',
+  'corte-caballero': '/src/assets/corte-hombre.webp',
+  tinte: '/src/assets/tinte-color.webp',
+  'mechas-balayage': '/src/assets/mechas.webp',
+  'alisado-keratina': '/src/assets/keratina.webp',
+  'tratamiento-capilar': '/src/assets/tratamiento-capilar.webp',
+  'maquillaje-social': '/src/assets/maquillaje.webp',
+  peinado: '/src/assets/peinado.webp',
+  'definicion-de-rizos': '/src/assets/rizos.webp',
+  manicure: '/src/assets/manicure.webp',
+  pedicure: '/src/assets/pedicure.webp',
+  cejas: '/src/assets/cejas.webp',
 };
 
 type ServicesSectionProps = {
