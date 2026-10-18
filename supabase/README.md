@@ -28,6 +28,11 @@ cancelación. Los tres servicios existentes en la landing se cargan como datos
 iniciales; si ya existe un servicio con ese identificador, se conserva su
 configuración.
 
+Después ejecuta también `migrations/20261017000000_more_salon_services.sql`, que
+agrega el resto de servicios del salón (corte, color, mechas, keratina,
+tratamiento capilar, manicure, pedicure y cejas). La página de reserva solo
+muestra los servicios que existen en la tabla `services`.
+
 ## Autorizar a la prestadora
 
 1. Crea/invita la cuenta de la prestadora en Supabase Auth y confirma su correo.

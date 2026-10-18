@@ -434,15 +434,36 @@ export function BookingFlow({ services }: { services: BookingService[] }) {
                 );
               })}
             </ul>
-            <Button
-              type="button"
-              disabled={selectedIds.length === 0}
-              onClick={goToSchedule}
-              className="h-12 w-full text-base sm:w-fit sm:px-8"
-            >
-              Continuar
-              <ArrowRight data-icon="inline-end" aria-hidden="true" />
-            </Button>
+            <div className="sticky bottom-0 z-30 -mx-4 flex flex-col gap-3 border-t bg-background/95 px-4 py-3 backdrop-blur supports-backdrop-filter:bg-background/80 sm:flex-row sm:items-center sm:justify-between md:-mx-8 md:px-8 lg:mx-0 lg:rounded-xl lg:border lg:px-5">
+              <p
+                aria-live="polite"
+                className="flex flex-col text-sm text-muted-foreground"
+              >
+                {selectedServices.length === 0 ? (
+                  <span>Selecciona al menos un servicio</span>
+                ) : (
+                  <>
+                    <span>
+                      {selectedServices.length}{' '}
+                      {selectedServices.length === 1 ? 'servicio' : 'servicios'}{' '}
+                      · {totalDuration} min
+                    </span>
+                    <span className="text-lg font-bold text-foreground">
+                      {formatPrice(totalPrice)}
+                    </span>
+                  </>
+                )}
+              </p>
+              <Button
+                type="button"
+                disabled={selectedIds.length === 0}
+                onClick={goToSchedule}
+                className="h-12 w-full text-base sm:w-fit sm:px-8"
+              >
+                Continuar
+                <ArrowRight data-icon="inline-end" aria-hidden="true" />
+              </Button>
+            </div>
           </section>
         )}
 
