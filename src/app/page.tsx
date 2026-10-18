@@ -9,6 +9,7 @@ import { StepsSection } from '@/components/landing/steps-section';
 import { ZonesSection } from '@/components/landing/zones-section';
 import {
   BOOKING_HREF,
+  BUSINESS_HOURS,
   CANCELLATION_HOURS,
   PRIVACY_HREF,
   PROVIDER_LOGIN_HREF,
@@ -28,7 +29,6 @@ export default function Page() {
     // Bottom padding keeps the fixed mobile booking bar from covering the footer.
     <div className="pb-32 md:pb-0">
       <SiteHeader
-        brand={brand}
         navLinks={navLinks}
         whatsappUrl={WHATSAPP_URL}
         bookingHref={BOOKING_HREF}
@@ -41,9 +41,18 @@ export default function Page() {
         />
         <ServicesSection services={services} bookingHref={BOOKING_HREF} />
         <StepsSection steps={steps} />
-        <ZonesSection zones={zones} tips={tips} whatsappUrl={WHATSAPP_URL} />
+        <ZonesSection
+          zones={zones}
+          tips={tips}
+          whatsappUrl={WHATSAPP_URL}
+          hours={BUSINESS_HOURS}
+        />
         <CancellationNotice hours={CANCELLATION_HOURS} />
-        <CtaSection bookingHref={BOOKING_HREF} whatsappUrl={WHATSAPP_URL} />
+        <CtaSection
+          bookingHref={BOOKING_HREF}
+          whatsappUrl={WHATSAPP_URL}
+          hours={BUSINESS_HOURS}
+        />
       </main>
       <SiteFooter
         brandName={brand.nombre}

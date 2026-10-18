@@ -1,4 +1,6 @@
-import { ArrowRight, Clock } from 'lucide-react';
+import Image from 'next/image';
+
+import { ArrowRight, Clock, Sparkles } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -10,6 +12,22 @@ import {
   CardHeader,
 } from '@/components/ui/card';
 import { formatPrice, type Service } from '@/lib/landing-data';
+
+// Images live in /public. Services without an entry fall back to a placeholder.
+const serviceImages: Record<string, string> = {
+  'corte-dama': '/corte-dama.webp',
+  'corte-caballero': '/corte-hombre.webp',
+  tinte: '/tinte-color.webp',
+  'mechas-balayage': '/mechas.webp',
+  'alisado-keratina': '/keratina.webp',
+  'tratamiento-capilar': '/tratamiento-capilar.webp',
+  'maquillaje-social': '/maquillaje.webp',
+  peinado: '/peinado.webp',
+  'definicion-de-rizos': '/rizos.webp',
+  manicure: '/manicure.webp',
+  pedicure: '/pedicure.webp',
+  cejas: '/cejas.webp',
+};
 
 type ServicesSectionProps = {
   services: Service[];
@@ -35,15 +53,30 @@ export function ServicesSection({
             Servicios y precios
           </h2>
           <p className="text-muted-foreground">
-            Puedes elegir uno o varios en la misma cita. El total y la duración
-            se calculan solos antes de confirmar.
+            Elige uno o varios servicios en la misma cita. El total y la
+            duración se calculan solos antes de confirmar.
           </p>
         </div>
 
-        <ul className="mt-10 grid gap-6 lg:grid-cols-3">
+        <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <li key={service.id} className="flex">
-              <Card className="w-full shadow-sm [--card-spacing:--spacing(6)]">
+              <Card className="w-full pt-0 shadow-sm [--card-spacing:--spacing(6)]">
+                <div className="relative aspect-4/3 w-full overflow-hidden bg-secondary">
+                  {serviceImages[service.id] ? (
+                    <Image
+                      src={serviceImages[service.id]}
+                      alt={service.nombre}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="flex size-full items-center justify-center text-primary/60">
+                      <Sparkles className="size-10" aria-hidden="true" />
+                    </div>
+                  )}
+                </div>
                 <CardHeader>
                   <h3 className="text-lg leading-7 font-semibold">
                     {service.nombre}

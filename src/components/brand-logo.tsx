@@ -2,8 +2,9 @@ import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
 
-// The logo uses dark brown strokes, so it sits on a light chip to stay
-// readable in dark mode.
+// The logo has a white background. In light mode it blends into the page
+// (multiply), in dark mode it keeps a soft white backing so the dark brown
+// strokes stay readable.
 export function BrandLogo({
   className,
   priority = false,
@@ -19,7 +20,7 @@ export function BrandLogo({
       height={1158}
       priority={priority}
       className={cn(
-        'h-12 w-auto rounded-lg bg-white px-1.5 py-0.5 ring-1 ring-foreground/10',
+        'h-12 w-auto mix-blend-multiply dark:rounded-2xl dark:bg-white dark:p-1.5 dark:mix-blend-normal',
         className
       )}
     />

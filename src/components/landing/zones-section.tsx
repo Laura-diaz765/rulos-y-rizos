@@ -14,9 +14,15 @@ type ZonesSectionProps = {
   zones: string[];
   tips: Tip[];
   whatsappUrl: string;
+  hours: string;
 };
 
-export function ZonesSection({ zones, tips, whatsappUrl }: ZonesSectionProps) {
+export function ZonesSection({
+  zones,
+  tips,
+  whatsappUrl,
+  hours,
+}: ZonesSectionProps) {
   return (
     <section
       id="zonas"
@@ -28,10 +34,10 @@ export function ZonesSection({ zones, tips, whatsappUrl }: ZonesSectionProps) {
           id="zonas-title"
           className="font-serif text-3xl tracking-tight md:text-4xl"
         >
-          Voy hasta donde estés
+          Vamos hasta donde estés
         </h2>
         <p className="text-muted-foreground">
-          Atiendo en tu casa, apartamento u oficina.
+          Atendemos en tu casa, apartamento u oficina. {hours}.
         </p>
       </div>
 
@@ -61,7 +67,7 @@ export function ZonesSection({ zones, tips, whatsappUrl }: ZonesSectionProps) {
                 rel="noopener noreferrer"
                 className="rounded-sm font-medium text-primary underline-offset-4 outline-none hover:underline focus-visible:ring-3 focus-visible:ring-ring/50"
               >
-                Escríbeme
+                Escríbenos
               </a>{' '}
               y lo revisamos.
             </p>

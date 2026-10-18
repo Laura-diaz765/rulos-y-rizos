@@ -19,10 +19,13 @@ const fontMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rulos Y Rizos Pa'ti",
-  icons: { icon: '/favicon.png', apple: '/favicon.png' },
+  title: "Rulos y Rizos Pa'ti | Salón de belleza a domicilio en Bogotá",
+  icons: {
+    icon: { url: '/favicon.webp', type: 'image/webp' },
+    apple: '/favicon.webp',
+  },
   description:
-    "Rulos Y Rizos Pa'ti: peluquería especializada en el cuidado del cabello, rizos definidos y belleza natural. ¡Resalta tu estilo con nosotros!",
+    "Salón de belleza a domicilio en Bogotá: corte, color, mechas, alisado, tratamientos capilares, rizos, peinados, maquillaje, manicure y pedicure. Reserva en línea de lunes a sábado.",
 };
 
 export default function RootLayout({

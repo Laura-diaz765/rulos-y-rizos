@@ -5,9 +5,14 @@ import { Button } from '@/components/ui/button';
 type CtaSectionProps = {
   bookingHref: string;
   whatsappUrl: string;
+  hours: string;
 };
 
-export function CtaSection({ bookingHref, whatsappUrl }: CtaSectionProps) {
+export function CtaSection({
+  bookingHref,
+  whatsappUrl,
+  hours,
+}: CtaSectionProps) {
   return (
     <section
       id="contacto"
@@ -22,7 +27,7 @@ export function CtaSection({ bookingHref, whatsappUrl }: CtaSectionProps) {
           ¿Agendamos tu próxima cita?
         </h2>
         <p className="max-w-xl text-lg leading-7 text-primary-foreground/85">
-          Reserva en línea cuando quieras. Si tienes una duda antes, escríbeme
+          Reserva en línea cuando quieras. Si tienes una duda antes, escríbenos
           por WhatsApp.
         </p>
         <div className="mt-4 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
@@ -42,9 +47,10 @@ export function CtaSection({ bookingHref, whatsappUrl }: CtaSectionProps) {
             className="h-12 border-primary-foreground/50 bg-transparent px-6 text-base font-semibold text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground focus-visible:ring-primary-foreground/60 dark:border-primary-foreground/50 dark:bg-transparent dark:hover:bg-primary-foreground/10"
           >
             <MessageCircle data-icon="inline-start" aria-hidden="true" />
-            Escríbeme por WhatsApp
+            Escríbenos por WhatsApp
           </Button>
         </div>
+        <p className="text-sm text-primary-foreground/85">{hours}</p>
       </div>
     </section>
   );

@@ -40,20 +40,21 @@ export function HeroSection({
       <div className="flex flex-col gap-6">
         <Badge variant="secondary" className="h-8 gap-2 px-3 text-sm">
           <MapPin aria-hidden="true" />
-          Estilista independiente · Servicio a domicilio
+          Salón de belleza · Servicio a domicilio en Bogotá
         </Badge>
 
         <h1
           id="hero-title"
           className="font-serif text-4xl leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl"
         >
-          Tus rizos, cuidados en casa y a tu hora.
+          Todo el salón de belleza, en la comodidad de tu casa.
         </h1>
 
         <p className="max-w-xl text-lg leading-8 text-muted-foreground">
-          Elige tu servicio, mira los horarios que están libres y reserva en
-          minutos. Sin esperar respuesta por chat y con el precio claro desde el
-          inicio.
+          Corte, color, tratamientos capilares, rizos, peinados, maquillaje y
+          uñas, con estilistas que llegan a tu domicilio. Elige tus servicios,
+          mira los horarios libres y reserva en minutos, con el precio claro
+          desde el inicio.
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row">
