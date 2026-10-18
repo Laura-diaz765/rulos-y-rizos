@@ -1,7 +1,19 @@
-import Image from 'next/image';
+import Image, { type StaticImageData } from 'next/image';
 
 import { ArrowRight, Clock, Sparkles } from 'lucide-react';
 
+import cejas from '@/assets/cejas.webp';
+import corteDama from '@/assets/corte-dama.webp';
+import corteHombre from '@/assets/corte-hombre.webp';
+import keratina from '@/assets/keratina.webp';
+import manicure from '@/assets/manicure.webp';
+import maquillaje from '@/assets/maquillaje.webp';
+import mechas from '@/assets/mechas.webp';
+import pedicure from '@/assets/pedicure.webp';
+import peinado from '@/assets/peinado.webp';
+import rizos from '@/assets/rizos.webp';
+import tinteColor from '@/assets/tinte-color.webp';
+import tratamientoCapilar from '@/assets/tratamiento-capilar.webp';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,20 +25,21 @@ import {
 } from '@/components/ui/card';
 import { formatPrice, type Service } from '@/lib/landing-data';
 
-// Images live in /public. Services without an entry fall back to a placeholder.
-const serviceImages: Record<string, string> = {
-  'corte-dama': '/src/assets/corte-dama.webp',
-  'corte-caballero': '/src/assets/corte-hombre.webp',
-  tinte: '/src/assets/tinte-color.webp',
-  'mechas-balayage': '/src/assets/mechas.webp',
-  'alisado-keratina': '/src/assets/keratina.webp',
-  'tratamiento-capilar': '/src/assets/tratamiento-capilar.webp',
-  'maquillaje-social': '/src/assets/maquillaje.webp',
-  peinado: '/src/assets/peinado.webp',
-  'definicion-de-rizos': '/src/assets/rizos.webp',
-  manicure: '/src/assets/manicure.webp',
-  pedicure: '/src/assets/pedicure.webp',
-  cejas: '/src/assets/cejas.webp',
+// Imported from src/assets so Next.js bundles them (string paths only work for
+// files in /public). Services without an entry fall back to a placeholder.
+const serviceImages: Record<string, StaticImageData> = {
+  'corte-dama': corteDama,
+  'corte-caballero': corteHombre,
+  tinte: tinteColor,
+  'mechas-balayage': mechas,
+  'alisado-keratina': keratina,
+  'tratamiento-capilar': tratamientoCapilar,
+  'maquillaje-social': maquillaje,
+  peinado,
+  'definicion-de-rizos': rizos,
+  manicure,
+  pedicure,
+  cejas,
 };
 
 type ServicesSectionProps = {
